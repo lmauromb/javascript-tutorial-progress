@@ -22,7 +22,7 @@ Track my progress through https://javascript.info/
 - [ ] Comparisons
 - [ ] Interaction: alert, prompt, confirm
 - [ ] Conditional operators: if, '?'
-- - [ ] Logical operators
+- [ ] Logical operators
 - [ ] Loops: while and for
 - [ ] The "switch" statement
 - [ ] Functions
