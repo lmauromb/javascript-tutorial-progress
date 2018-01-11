@@ -18,7 +18,8 @@ Track my progress through https://javascript.info/
 - [x] Variables
 - [x] Data types
 - [x] Type Conversions
-- [ ] Operators
+- [x] Operators
+  - [Read Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
 - [ ] Comparisons
 - [ ] Interaction: alert, prompt, confirm
 - [ ] Conditional operators: if, '?'
