@@ -16,8 +16,8 @@ Track my progress through https://javascript.info/
 - [x] Code structure
 - [x] The modern mode, "use strict"
 - [x] Variables
-- [ ] Data types
-- [ ] Type Conversions
+- [x] Data types
+- [x] Type Conversions
 - [ ] Operators
 - [ ] Comparisons
 - [ ] Interaction: alert, prompt, confirm
