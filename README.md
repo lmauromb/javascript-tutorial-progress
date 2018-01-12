@@ -20,10 +20,10 @@ Track my progress through https://javascript.info/
 - [x] Type Conversions
 - [x] Operators
   - [Read Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-- [ ] Comparisons
-- [ ] Interaction: alert, prompt, confirm
-- [ ] Conditional operators: if, '?'
-- [ ] Logical operators
+- [x] Comparisons
+- [x] Interaction: alert, prompt, confirm
+- [x] Conditional operators: if, '?'
+- [x] Logical operators
 - [ ] Loops: while and for
 - [ ] The "switch" statement
 - [ ] Functions
