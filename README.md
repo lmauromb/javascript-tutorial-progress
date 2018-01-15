@@ -25,10 +25,10 @@ Track my progress through https://javascript.info/
 - [x] Conditional operators: if, '?'
 - [x] Logical operators
 - [x] Loops: while and for
-- [ ] The "switch" statement
-- [ ] Functions
-- [ ] Function expressions and arrows
-- [ ] JavaScript specials
+- [x] The "switch" statement
+- [x] Functions
+- [x] Function expressions and arrows
+- [x] JavaScript specials
 
 ## Code quality
 
