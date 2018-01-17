@@ -32,8 +32,8 @@ Track my progress through https://javascript.info/
 
 ## Code quality
 
-- [ ] Debugging in Chrome
-- [ ] Coding style
+- [x] Debugging in Chrome
+- [x] Coding style
 - [ ] Comments
 - [ ] Ninja code
 - [ ] Automated testing with mocha
