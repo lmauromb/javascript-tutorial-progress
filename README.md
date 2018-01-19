@@ -34,8 +34,8 @@ Track my progress through https://javascript.info/
 
 - [x] Debugging in Chrome
 - [x] Coding style
-- [ ] Comments
-- [ ] Ninja code
+- [x] Comments
+- [x] Ninja code
 - [ ] Automated testing with mocha
 - [ ] Polyfills
 
