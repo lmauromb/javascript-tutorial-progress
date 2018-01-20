@@ -37,7 +37,7 @@ Track my progress through https://javascript.info/
 - [x] Comments
 - [x] Ninja code
 - [x] Automated testing with mocha
-- [ ] Polyfills
+- [x] Polyfills
 
 ## Objects: the basics
 
