@@ -41,7 +41,7 @@ Track my progress through https://javascript.info/
 
 ## Objects: the basics
 
-- [ ] Objects
+- [x] Objects
 - [ ] Garbage collection
 - [ ] Symbol type
 - [ ] Object methods, "this"
