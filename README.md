@@ -43,7 +43,7 @@ Track my progress through https://javascript.info/
 
 - [x] Objects
 - [x] Garbage collection
-- [ ] Symbol type
+- [x] Symbol type
 - [ ] Object methods, "this"
 - [ ] Object to primitive conversion
 - [ ] Constructor, operator "new"
