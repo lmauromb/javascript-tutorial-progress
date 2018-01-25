@@ -43,6 +43,12 @@ Track my progress through https://javascript.info/
 
 - [x] Objects
 - [x] Garbage collection
+  - Going deeper:
+    - Book *“The Garbage Collection Handbook: The Art of Automatic Memory Management”* (R. Jones et al)
+    - V8
+      - [A tour of V8: Garbage Collection](http://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection)
+      - [V8 blog](http://v8project.blogspot.com/)
+      - [Vyacheslav Egorov blog](http://mrale.ph/)
 - [x] Symbol type
 - [ ] Object methods, "this"
 - [ ] Object to primitive conversion
