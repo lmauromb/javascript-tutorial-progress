@@ -50,6 +50,14 @@ Track my progress through https://javascript.info/
       - [V8 blog](http://v8project.blogspot.com/)
       - [Vyacheslav Egorov blog](http://mrale.ph/)
 - [x] Symbol type
+  - Global Symbols
+    - In order to create or read a symbol in the global registry use `Symbol.for(key)`
+    - Reverse call to return a name by a global symbol `Symbol.keyFor(sym)`
+  - "Hidden" object properties, does not appear in `for..in`
+    - Technically, symbols are still accessible by [Object.getOwnPropertySymbols(obj)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols) that allows us to get all symbols, and [Reflect.ownKeys(obj)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys) that returns all keys of an object including symbolic ones
+  - There are many system symbols used by JavaScript, accessible as `Symbol.*`
+    - Ex. `Symbol.iterator` for [iterables](http://javascript.info/iterable)
+    - Ex. `Symbol.toPrimitive` to setup [object-to-primitive conversion](http://javascript.info/object-toprimitive)
 - [ ] Object methods, "this"
 - [ ] Object to primitive conversion
 - [ ] Constructor, operator "new"
