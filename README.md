@@ -58,7 +58,7 @@ Track my progress through https://javascript.info/
   - There are many system symbols used by JavaScript, accessible as `Symbol.*`
     - Ex. `Symbol.iterator` for [iterables](http://javascript.info/iterable)
     - Ex. `Symbol.toPrimitive` to setup [object-to-primitive conversion](http://javascript.info/object-toprimitive)
-- [ ] Object methods, "this"
+- [x] Object methods, "this"
 - [ ] Object to primitive conversion
 - [ ] Constructor, operator "new"
 
