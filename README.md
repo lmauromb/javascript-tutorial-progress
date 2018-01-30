@@ -59,7 +59,21 @@ Track my progress through https://javascript.info/
     - Ex. `Symbol.iterator` for [iterables](http://javascript.info/iterable)
     - Ex. `Symbol.toPrimitive` to setup [object-to-primitive conversion](http://javascript.info/object-toprimitive)
 - [x] Object methods, "this"
-- [ ] Object to primitive conversion
+- [x] Object to primitive conversion
+  - The *object-to-primitive* conversion is called automatically by many built-in functions and operators that expect a primitive as a value.
+  - There is no Object to Boolean primitive conversion, as every object is **true**.
+  - For any primitive conversion JavaScript takes a hint, there are 3 types of it:
+    - `string` (for string conversions, like `alert`)
+    - `number` (for maths)
+    - `default` (few operators)
+  - The specification describes explicitly which operator uses which hint. There are some cases in where operators "don't know what to expect" and use the `default` hint. Usually for built-in objects the `default` hint is handled the same way `number` is handled, so in practide the last two are merged together.
+  - The conversion algorithm is:
+    1. Call `obj[Symbol.toPrimitive](hint)` if the method exists,
+    2. Otherwise if hint is `string`
+      - try `obj.toString()` and `obj.valueOf()`, whatever exists.
+    3. Otherwise if hint is `number` or `default`
+      - try `obj.valueOf()` and `obj.toString()`, whatever exists.
+    - In practice, it's often enough to implement only `obj.toString()` as "catch-all" method for all conversions that return a "human-readable", representation of an object, for logging or debugging purposes.
 - [ ] Constructor, operator "new"
 
 ## Data types
