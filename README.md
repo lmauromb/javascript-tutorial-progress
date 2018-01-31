@@ -74,7 +74,9 @@ Track my progress through https://javascript.info/
     3. Otherwise if hint is `number` or `default`
       - try `obj.valueOf()` and `obj.toString()`, whatever exists.
     - In practice, it's often enough to implement only `obj.toString()` as "catch-all" method for all conversions that return a "human-readable", representation of an object, for logging or debugging purposes.
-- [ ] Constructor, operator "new"
+- [x] Constructor, operator "new"
+  - Constructors are regular functions, but there's a common agreement to name them with capital letters first.
+  - Constructor functions should only be called using `new`. Such a call implies a creation of empty `this` at the start and returning the populated one at the end.
 
 ## Data types
 
