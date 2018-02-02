@@ -81,7 +81,7 @@ Track my progress through https://javascript.info/
 ## Data types
 
 - [x] Methods of primitives
-- [ ] Numbers
+- [x] Numbers
 - [ ] Strings
 - [ ] Arrays
 - [ ] Array methods
