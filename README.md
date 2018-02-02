@@ -82,7 +82,7 @@ Track my progress through https://javascript.info/
 
 - [x] Methods of primitives
 - [x] Numbers
-- [ ] Strings
+- [x] Strings
 - [ ] Arrays
 - [ ] Array methods
 - [ ] Iterables
