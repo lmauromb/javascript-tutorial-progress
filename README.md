@@ -82,6 +82,27 @@ Track my progress through https://javascript.info/
 
 - [x] Methods of primitives
 - [x] Numbers
+  - Imprecise calculations:
+    - In JavaScript, a number is internally represented in 64-bit format [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754-1985). So, there are exactly 64 bits to store a number, `52` of them are used to store the digits, `11` of them store the decimal point (zero for integer numbers), and `1` bit is for the sign.
+    - If a number is too big, it would overflow thr 64-bit storare, and potentially giving `Infinity`.
+    - Also, because a number is stored in memory in its binary form, fractions like `0.1` and `0.2` are unending fractions. So, `0.1 + 0.2 === 0.3` is falsy.
+  - isFinite and isNaN
+    - In JavaScript there are two special values that belong to `number`, but are not "normal" numbers, so there are special functions to check them.
+    - `Infinity` (and `-Infinity`) is a special numeric value that is grester (less) than anything. `isFinite(number)` converts its argument to a number and returns true if it’s a regular number, not NaN/Infinity/-Infinity. 
+    - `NaN` represents an error, the value is unique that it does not equal anything, including `NaN`. `isNaN(number)` converts its argument and test it for being `NaN`.
+  - To write big numbers:
+    - Append "e" with the zeroes count to the number. Like: `123e6` is `123` with 6 zeroes.
+    - A negative number after `"e"` causes the number to be divided by 1 with given zeroes. That’s for one-millionth or such.
+  - For different numeral systems:
+    - Can write numbers directly in hex (`0x`), octal (`0o`) and binary (`0b`) systems
+    - `parseInt(str, base)` parses an integer from any numeral system with base: `2 <= base <= 36`.
+    - `num.toString(base)` converts a number to a string in the numeral system with the given `base`.
+  - For converting values like `12pt` and `100px` to a number:
+    - Use `parseInt/parseFloat` for the “soft” conversion, which reads a number from a string and then returns the value they could read before the error.
+  - For fractions:
+    - Round using `Math.floor`, `Math.ceil`, `Math.trunc`, `Math.round` or `num.toFixed(precision)`.
+    - Make sure to remember there’s a loss of precision when working with fractions.
+  - See the [Math](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math) object when you need them. The library is very small, but can cover basic needs.
 - [x] Strings
 - [ ] Arrays
 - [ ] Array methods
