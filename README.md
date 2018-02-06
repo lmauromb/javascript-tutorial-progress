@@ -104,6 +104,18 @@ Track my progress through https://javascript.info/
     - Make sure to remember there’s a loss of precision when working with fractions.
   - See the [Math](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math) object when you need them. The library is very small, but can cover basic needs.
 - [x] Strings
+  - There are 3 types of quotes. Backticks allow a string to span multiple lines and embed expressions.
+  - Strings in JavaScript are encoded using `UTF 16`.
+  - We can use special characters like `\n` and insert letters by their unicode using `\u....`
+  - To get a character, use: `[]`.
+  - To get a substring, use: `slice` or `substring`.
+  - To lowercase/uppercase a string, use: `toLowerCase/toUpperCase`.
+  - To look for a substring, use: `indexOf`, or `includes/startsWith/endsWith` for simple checks.
+  - To compare strings according to the language, use: `localeCompare`, otherwise they are compared by character codes.
+  - Other helpful methods:
+    - `str.trim()` – removes (“trims”) spaces from the beginning and end of the string.
+    - `str.repeat(n)` – repeats the string `n` times.
+    - …and more. See the [manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for details.
 - [ ] Arrays
 - [ ] Array methods
 - [ ] Iterables
