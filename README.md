@@ -117,7 +117,7 @@ Track my progress through https://javascript.info/
     - `str.repeat(n)` – repeats the string `n` times.
     - …and more. See the [manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for details.
 - [x] Arrays
-- [ ] Array methods
+- [x] Array methods
 - [ ] Iterables
 - [ ] Map, Set, WeakMap and WeakSet
 - [ ] Object.keys, values, entries
