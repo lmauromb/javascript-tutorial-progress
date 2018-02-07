@@ -116,7 +116,7 @@ Track my progress through https://javascript.info/
     - `str.trim()` – removes (“trims”) spaces from the beginning and end of the string.
     - `str.repeat(n)` – repeats the string `n` times.
     - …and more. See the [manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for details.
-- [ ] Arrays
+- [x] Arrays
 - [ ] Array methods
 - [ ] Iterables
 - [ ] Map, Set, WeakMap and WeakSet
