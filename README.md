@@ -118,6 +118,37 @@ Track my progress through https://javascript.info/
     - …and more. See the [manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for details.
 - [x] Arrays
 - [x] Array methods
+  - A cheatsheet of array methods:
+    - To add/remove elements:
+      - `push(...items)` -- adds items to the end,
+      - `pop()` -- extracts an item from the end,
+      - `shift()` -- extracts an item from the beginning,
+      - `unshift(...items)` -- adds items to the beginning.
+      - `splice(pos, deleteCount, ...items)` -- at index `pos` delete `deleteCount` elements and insert `items`.
+      - `slice(start, end)` -- creates a new array, copies elements from position `start` till `end` (not inclusive) into it.
+      - `concat(...items)` -- returns a new array: copies all members of the current one and adds `items` to it. If any of `items` is an array, then its elements are taken.
+    - To search among elements:
+      - `indexOf/lastIndexOf(item, pos)` -- look for `item` starting from position `pos`, return the index or `-1` if not found.
+      - `includes(value)` -- returns `true` if the array has `value`, otherwise `false`.
+      - `find/filter(func)` -- filter elements through the function, return first/all values that make it return `true`.
+      - `findIndex` is like `find`, but returns the index instead of a value.
+    - To transform the array:
+      - `map(func)` -- creates a new array from results of calling `func` for every element.
+      - `sort(func)` -- sorts the array in-place, then returns it.
+      - `reverse()` -- reverses the array in-place, then returns it.
+      - `split/join` -- convert a string to array and back.
+      - `reduce(func, initial)` -- calculate a single value over the array by calling `func` for each element and passing an intermediate result between the calls.
+    - To iterate over elements:
+      - `forEach(func)` -- calls `func` for every element, does not return anything.
+    - Additionally:
+      - `Array.isArray(arr)` checks `arr` for being an array.
+    - Please note that methods `sort`, `reverse` and `splice` modify the array itself.
+    - These methods are the most used ones, they cover 99% of use cases. But there are few others:
+    - [arr.some(fn)](mdn:js/Array/some)/[arr.every(fn)](mdn:js/Array/every) checks the array.
+    - The function `fn` is called on each element of the array similar to `map`. If any/all results are `true`, returns `true`, otherwise `false`.
+    - [arr.fill(value, start, end)](mdn:js/Array/fill) -- fills the array with repeating `value` from index `start` to `end`.
+    - [arr.copyWithin(target, start, end)](mdn:js/Array/copyWithin) -- copies its elements from position `start` till position `end` into *itself*, at position `target` (overwrites existing).
+    - For the full list, see the [manual](mdn:js/Array).
 - [ ] Iterables
 - [ ] Map, Set, WeakMap and WeakSet
 - [ ] Object.keys, values, entries
