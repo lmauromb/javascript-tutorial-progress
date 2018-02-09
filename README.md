@@ -149,7 +149,7 @@ Track my progress through https://javascript.info/
     - [arr.fill(value, start, end)](mdn:js/Array/fill) -- fills the array with repeating `value` from index `start` to `end`.
     - [arr.copyWithin(target, start, end)](mdn:js/Array/copyWithin) -- copies its elements from position `start` till position `end` into *itself*, at position `target` (overwrites existing).
     - For the full list, see the [manual](mdn:js/Array).
-- [ ] Iterables
+- [x] Iterables
 - [ ] Map, Set, WeakMap and WeakSet
 - [ ] Object.keys, values, entries
 - [ ] Destructuring assignment
