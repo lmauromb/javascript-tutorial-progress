@@ -161,6 +161,46 @@ Track my progress through https://javascript.info/
   - If we look inside the specification – we’ll see that most built-in methods assume that they work with iterables or array-likes instead of “real” arrays, because that’s more abstract.
   - `Array.from(obj[, mapFn, thisArg])` makes a real `Array` of an iterable or array-like `obj`, and we can then use array methods on it. The optional arguments `mapFn` and `thisArg` allow us to apply a function to each item.
 - [x] Map, Set, WeakMap and WeakSet
+  - `Map` is a collection of keyed values.
+    - The differences form a regular `Object`:
+      - Any keys, objects can be objects.
+      - Iterates in the insertion order.
+      - Additiona convenient methods, the `size` property.
+    - Main methods:
+      - `new Map()` creates the map.
+      - `map.set(key, value)` stores the value by the key.
+      - `map.get(key)` returns the value by the key, `undefined` if `key` doesn't exist in map.
+      - `map.has(key)` returns `true` if the `key` exists, `false` otherwise.
+      - `map.delete(key)` removes the value by the key.
+      - `map.clear()` clears the map.
+      - `map.size` returns the current element count.
+      - For looping over a `map`, there are 3 methods:
+        - `map.keys()` returns an interable for keys.
+        - `map.values()` returns an iterable for values.
+        - `map.entries()` returns an iterable for entries `[key, value]`, it's used by default in `for..of`.
+      - Besides that, `Map`  has a built-in `forEach` method, similar to `Array`.
+        - `map.forEach( (value, key, map) => {} );`
+  - `Set` is a collection of unique values.
+    - Unlike an array, does not allow to reorder elements.
+    - Keeps insertion order.
+    - Main methods:
+      - `new Set(iterable)` creates the set, optionally from an array of values (any iterable will do).
+      - `set.add(value)` adds a value, returns the set itself.
+      - `set.delete(value)` removes the value, returns true if value existed at the moment of the call, otherwise false.
+      - `set.has(value)` returns true if the value exists in the set, otherwise false.
+      - `set.clear()` removes everything from the set.
+      - `set.size` is the elements count.
+      - For looping over a `Set` the same iterators are also supported:
+        - `set.keys()` returns an iterable object for values.
+        - `set.values()` same as `set.keys()`, kept for compatibility with `Map`,
+        - `set.entries()` returns an iterable object for entries `[values, value]`, exists for compatibility with `Map`
+    - Using `forEach` is also possible, but for compatibility with `Map` the functions has 3 arguments: a value, then *again* a value, an then the target object. The same value appears in the argument twice.
+      - `set.forEach( (value, valueAgain, set) => {} );`
+  - `WeakMap` a variant of `Map` that allows only objects as keys and removes them once they become inaccessible by other means.
+    - It does not support operations on the structure as a whole: no `size`, no `clear()`, no iterations.
+  - `WeakSet` is a variant of `Set` that only stores objects and removes them once they become inaccessible by other means.
+    - Also does not support `size/clear()` and iterations.
+  - `WeakMap` and `WeakSet` are used as “secondary” data structures in addition to the “main” object storage. Once the object is removed from the main storage, so it only stays in `WeakMap/WeakSet`, they clean up automatically.
 - [ ] Object.keys, values, entries
 - [ ] Destructuring assignment
 - [ ] Date and time
