@@ -219,7 +219,15 @@ Track my progress through https://javascript.info/
         - returns an array only of symbolic properties.
       - [`Reflect.ownKeys(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)
         - returns all object properties, 'regular' and symbolic ones.
-- [ ] Destructuring assignment
+- [x] Destructuring assignment
+  - Destructuring assignment allows for instantly mapping an object or array onto many variables.
+  - Object syntax:
+    - `let {prop : varName = default, ...} = object`
+    - This means that property `prop` should go into the variable `varName` and, if no such property exists, then `default` value should be used.
+  - Array syntax:
+    - `let [item1 = default, item2, ...rest] = array`
+    - The first item goes to `item1`, the second goes into `item2`, all the rest makes the array `rest`.
+    - For more complex cases, the left side must have the same structure as the right one.
 - [ ] Date and time
 - [ ] JSON methods, toJSON
 
