@@ -201,7 +201,24 @@ Track my progress through https://javascript.info/
   - `WeakSet` is a variant of `Set` that only stores objects and removes them once they become inaccessible by other means.
     - Also does not support `size/clear()` and iterations.
   - `WeakMap` and `WeakSet` are used as “secondary” data structures in addition to the “main” object storage. Once the object is removed from the main storage, so it only stays in `WeakMap/WeakSet`, they clean up automatically.
-- [ ] Object.keys, values, entries
+- [x] Object.keys, values, entries
+  - Previously, we saw methods `map.keys()`, `map.values()` and `map.entries()`. These methods are generic, there is a common agreement to use them for data structures. If we ever create a data structure of our own, we should implement them too.
+    - They are supported in `Map`, `Set` and `Array` (except for `arr.values()`).
+  - For plain objects, the following methods are available.
+    - [`Object.keys(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+      - returns an array of keys.
+    - [`Object.values(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+      - returns an array of values.
+    - [`Object.entries(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+      - returns an array of [key, value] pairs.
+    - There are two differences with the past methods.
+      - First, we have to call `Object.keys(obj)`, and not `obj.keys()`.
+      - Second, `Object.*` methods return “real” array objects, not just an iterable. That’s mainly for historical reasons.
+    - Like `for..in` loop, these methods ignore properties that use `Symbol(...)` as keys. To get the symbolic keys we have two methods:
+      - [`Object.getOwnPropertySymbols(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
+        - returns an array only of symbolic properties.
+      - [`Reflect.ownKeys(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)
+        - returns all object properties, 'regular' and symbolic ones.
 - [ ] Destructuring assignment
 - [ ] Date and time
 - [ ] JSON methods, toJSON
