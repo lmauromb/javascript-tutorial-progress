@@ -228,7 +228,38 @@ Track my progress through https://javascript.info/
     - `let [item1 = default, item2, ...rest] = array`
     - The first item goes to `item1`, the second goes into `item2`, all the rest makes the array `rest`.
     - For more complex cases, the left side must have the same structure as the right one.
-- [ ] Date and time
+- [x] Date and time
+  - Methods:
+    - Creation:
+      - `new Date()` without arguments, create a `Date` object for the current date and time.
+      - `new Date(milliseconds)` create a `Date` object with the time equal to number of milliseconds (1/1000 of a second) passed afeter `Jan 1st of 1970 UTC+0`.
+      - `new Date('year-month-day')`, if the argument is a string then it is parsed with the `Date.parse` algorithm.
+      - `new Date(year, month, date, hours, minutes, seconds, ms)` create the date with the given components in the local time zone. Only two first arguments are obligatory.
+        - `year` must have 4 digits: 2013 is okay, 98 is not.
+        - `month` count starts with 0 (Jan), up to 11 (Dec).
+        - `date` parameter is actually the day of month, if absent then 1 is assumed.
+        - `hours/minutes/seconds/ms` is absent, they are assumed to be equal 0.
+    - Access:
+      - `getFullYear()` get the year (4 digits).
+      - `getMonth()` get the month, from 0 to 11.
+      - `getDate()` get the day of the month, from 1 to 31.
+      - `getDay()` get the day of the week, from 0 (Sunday) to 6 (Saturday).
+      - `getHours()`, `getMinutes()`, `getSeconds()`, `getMilliseconds()`.
+    - All the methods above return the components relative to the local time zone.
+    - There are also their UTC-counterparts, that return day, month, year and so on for the time zone UTC+0: `getUTCFullYear()`, `getUTCMonth()`, `getUTCDay()`. Just insert the "UTC" right after "get".
+    - Besides the given methods, there are two special ones, that do not have a UTC-variant:
+      - `getTime()` returns the timestamp for the date – a number of milliseconds passed from the January 1st of 1970 UTC+0.
+      - `getTimezoneOffset()` returns the difference between the local time zone and UTC, in minutes.
+  - Date and time in JavaScript are represented with the `Date` object. We can't create 'only date' or 'only time'.
+  - Months are counted from zero (yes, Janaury is zero month).
+  - Days of week in `getDay()` are also counted from zero (that's Sunday).
+  - `Date` auto-corrects itself when out-of-range components are set. Good for adding/subtracting days/months/hours.
+  - Dates can be sutracted, giving their differences in milliseconds. That's because a `Date` becomes the timestamp when converted to a number.
+  - Use `Date.now()` to get the current timestamp fast.
+  - Unlike many othe systems, timestamps in JavaScript are in milliseconds, not in seconds.
+  - When we need more precise measurements, we need to leverage for the different envioroments of JavaScript, JavaScript itself does not have a way to measure time in microseconds (1 millionth of a second).
+    - Browser has `performance.now()`.
+    - Node has `microtime` module.
 - [ ] JSON methods, toJSON
 
 ## Advanced working with functions
