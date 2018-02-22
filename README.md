@@ -260,8 +260,15 @@ Track my progress through https://javascript.info/
   - When we need more precise measurements, we need to leverage for the different envioroments of JavaScript, JavaScript itself does not have a way to measure time in microseconds (1 millionth of a second).
     - Browser has `performance.now()`.
     - Node has `microtime` module.
-- [ ] JSON methods, toJSON
-
+- [x] JSON methods, toJSON
+  - JSON is a data format that has its own independent standard and libraries for most programming languages.
+  - JSON supports plain objects, arrays, strings, numbers, booleans and `null`.
+    - Function properties (methods), Symbolic properties, and Properties that store undefined, are skipped.
+  - JavaScript provides methods [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) to serialize into JSON and [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) to read from JSON.
+  - Both methods support transformer functions for smart reading/writing.
+    - For `JSON.stringify` we have replacer.
+    - For `JSON.parse` we have reviver.
+  - If an object has `toJSON`, then it is called by `JSON.stringify`.
 ## Advanced working with functions
 
 - [ ] Recursion and stack
