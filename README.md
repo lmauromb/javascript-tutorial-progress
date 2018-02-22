@@ -269,6 +269,7 @@ Track my progress through https://javascript.info/
     - For `JSON.stringify` we have replacer.
     - For `JSON.parse` we have reviver.
   - If an object has `toJSON`, then it is called by `JSON.stringify`.
+
 ## Advanced working with functions
 
 - [ ] Recursion and stack
@@ -305,17 +306,72 @@ Track my progress through https://javascript.info/
 > Browser: Document, Events, Interfaces
 
 ## Document
+- [ ] Browser environment, specs
+- [ ] DOM tree
+- [ ] Walking the DOM
+- [ ] Searching: getElement* and querySelector*
+- [ ] Node properties: type, tag and contents
+- [ ] Attributes and properties
+- [ ] Modifying the document
+- [ ] Styles and classes
+- [ ] Element size and scrolling
+- [ ] Window sizes and scrolling
+- [ ] Coordinates
 
 ## Introduction into Events
+- [ ] Introduction to browser events
+- [ ] Bubbling and capturing
+- [ ] Event delegation
+- [ ] Browser default actions
+- [ ] Dispatching custom events
 
 ## Events in details
+- [ ] Mouse events basics
+- [ ] Moving: mouseover/out, mouseenter/leave
+- [ ] Drag'n'Drop with mouse events
+- [ ] Keyboard: keydown and keyup
+- [ ] Scrolling
+- [ ] Page lifecycle: DOMContentLoaded, load, beforeunload, unload
+- [ ] Resource loading: onload and onerror
 
 ## Forms, controls
+- [ ] Form properties and methods
+- [ ] Focusing: focus/blur
+- [ ] Events: change, input, cut, copy, paste
+- [ ] Form submission: event and method submit
 
 > Additional articles
 
 ## Animation
+- [ ] Bezier curve
+- [ ] CSS-animations
+- [ ] JavaScript animations
 
 ## Frames and windows
+- [ ] Popups and window methods
+- [ ] Cross-window communication
+- [ ] The clickjacking attack
+
+## Regular expressions
+- [ ] Patterns and flags
+- [ ] Methods of RegExp and String
+- [ ] Character classes
+- [ ] Escaping, special characters
+- [ ] Sets and ranges [...]
+- [ ] The unicode flag
+- [ ] Quantifiers +, *, ? and {n}
+- [ ] Greedy and lazy quantifiers
+- [ ] Capturing groups
+- [ ] Backreferences: \n and $n
+- [ ] Alternation (OR) |
+- [ ] String start ^ and finish $
+- [ ] Multiline mode, flag "m"
+- [ ] Lookahead (in progress)
+- [ ] Infinite backtracking problem
 
 ## Promises, async/await
+- [ ] Introduction: callbacks
+- [ ] Promise
+- [ ] Promises chaining
+- [ ] Promise API
+- [ ] Async/await
