@@ -272,7 +272,7 @@ Track my progress through https://javascript.info/
 
 ## Advanced working with functions
 
-- [ ] Recursion and stack
+- [x] Recursion and stack
 - [ ] Rest parameters and spread operator
 - [ ] Closure
 - [ ] The old "var"
