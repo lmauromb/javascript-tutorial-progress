@@ -273,7 +273,16 @@ Track my progress through https://javascript.info/
 ## Advanced working with functions
 
 - [x] Recursion and stack
-- [ ] Rest parameters and spread operator
+- [x] Rest parameters and spread operator
+  - When we se `"..."` in the code, it is either rest parameters or the spread operator.
+  - There's an easy way to distinguish between them:
+    - When `...` is at the end of function parameters, it's "rest parameters" and gathers the rest of the list into arguments into an array.
+    - When `...` occurs in a function call or alike, it's called a "spread operator" and expands an array into a list.
+  - Use patterns:
+    - Rest parameters are used to create functions that accept any number of arguments.
+    - The spread operator is sued to pass an array to functions that normally require a list of many arguments.
+  - Together they help to travel between a list and an array of parameters with ease.
+  - All arguments of a function call are also available in "old-style" `arguments`, an array-like iterable object.
 - [ ] Closure
 - [ ] The old "var"
 - [ ] Global object
