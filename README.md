@@ -283,7 +283,7 @@ Track my progress through https://javascript.info/
     - The spread operator is sued to pass an array to functions that normally require a list of many arguments.
   - Together they help to travel between a list and an array of parameters with ease.
   - All arguments of a function call are also available in "old-style" `arguments`, an array-like iterable object.
-- [ ] Closure
+- [x] Closure
 - [ ] The old "var"
 - [ ] Global object
 - [ ] Function object, NFE
