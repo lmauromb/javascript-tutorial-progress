@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <script>
+     'use strict';
+
+     let currentUser = prompt("Who's there?", "");
+
+     if (currentUser == null) {
+       alert("Canceled");
+     } else if (currentUser == "Admin") {
+       let currentUserPassword = prompt("Password?", "");
+
+       if (currentUserPassword == null) {
+         alert("Canceled");
+       } else if (currentUserPassword == "TheMaster") {
+         alert("Welcome!");
+       } else {
+         alert("Wrong password");
+       }
+     } else {
+       alert("I don't know you");
+     }
+    </script>
+  </body>
+
+</html>

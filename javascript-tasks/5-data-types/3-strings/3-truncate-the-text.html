@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>String Data Type</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+     "use strict";
+
+     function truncate(str, maxLength) {
+       return str.length > maxLength ? str.slice(0, maxLength - 1) + "…" : str;
+     }
+
+     alert( truncate("What I'd like to tell on this topic is:", 20) );
+     alert( truncate("Hi everyone!", 20) );
+    </script>
+  </body>
+</html>

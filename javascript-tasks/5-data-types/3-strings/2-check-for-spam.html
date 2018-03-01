@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>String Data Type</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+     "use strict";
+
+     function checkSpam(str) {
+       let lowerCasedString = str.toLowerCase();
+       return lowerCasedString.includes('viagra') || lowerCasedString.includes('xxx');
+     }
+
+     alert( checkSpam('buy ViAgRA now') ); //true
+     alert( checkSpam('free xxxxx') ); //true
+     alert( checkSpam("innocent rabbit") ); //false
+    </script>
+  </body>
+</html>

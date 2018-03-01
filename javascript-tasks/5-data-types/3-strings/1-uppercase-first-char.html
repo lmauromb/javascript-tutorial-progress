@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>String Data Type</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+     "use strict";
+
+     function ucFirst(str) {
+       return str[0].toUpperCase() + str.slice(1);
+     }
+
+     let userName = prompt("Say my name", "");
+
+     alert( ucFirst(userName) );
+    </script>
+  </body>
+</html>

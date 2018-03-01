@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>String Data Type</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+     "use strict";
+
+     function extractCurrencyValue(price) {
+       return Number( price.slice(1) );
+     }
+
+     alert( extractCurrencyValue('$120') );
+    </script>
+  </body>
+</html>

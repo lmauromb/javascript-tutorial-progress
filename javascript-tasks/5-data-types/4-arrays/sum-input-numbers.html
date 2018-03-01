@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <tilte>Array Data Type</tilte>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+     "use strict";
+
+     alert( sumInput(readInput()) );
+
+     function readInput() {
+       let inputArray = [];
+
+       while (true) {
+         let inputValue = prompt("Give me numbers", "");
+
+         if (inputValue === ""
+             || inputValue === null
+             || !isFinite(inputValue)) {
+           break;
+         }
+
+         inputArray.push( +inputValue );
+       }
+
+       return inputArray;
+     }
+
+     function sumInput(inputArray) {
+       let total = 0;
+
+       for (let value of inputArray) {
+         if ( isFinite(value) ) total += value;
+       }
+
+       return total;
+     }
+    </script>
+  </body>
+</html>
