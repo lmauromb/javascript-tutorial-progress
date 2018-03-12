@@ -307,7 +307,16 @@ Track my progress through https://javascript.info/
     - But starting from ES-2015, these entities are split apart. There’s a global Lexical Environment with its Environment Record. And there’s a global object that provides some of the global variables.
     - As a practical difference, global `let/const` variables are definitively properties of the global Environment Record, but they do not exist in the global object.
     - Naturally, that’s because the idea of a global object as a way to access “all global things” comes from ancient times. Nowadays is not considered to be a good thing. Modern language features like `let/const` do not make friends with it, but old ones are still compatible.
-- [ ] Function object, NFE
+- [x] Function object, NFE
+  - *Named Function Expression*
+  - Functions are `objects`.
+  - Properties:
+    - `name` - the function name. Exists not only when given in the function definition, but also for assignments and object properties.
+    - `length` - the number of arguments in the function definition. Rest parameters are not counted.
+  - If the function is declared as a Function Expression (not in the main code flow), and it carries the name, then it is called a Named Function Expression. The name can be used inside to reference itself, for recursive calls or such.
+  - Also, functions may carry additional properties. Many well-known JavaScript libraries make great use of this feature.
+  - They create a “main” function and attach many other “helper” functions to it. For instance, the [jquery](https://jquery.com/) library creates a function named `$`. The [lodash](https://lodash.com/) library creates a function `_`. And then adds `_.clone`, `_.keyBy` and other properties to (see the docs when you want learn more about them). Actually, they do it to lessen their pollution of the global space, so that a single library gives only one global variable. That reduces the possibility of naming conflicts.
+  - So, a function can do a useful job by itself and also carry a bunch of other functionality in properties.
 - [ ] The "new Function" syntax
 - [ ] Scheduling: setTimeout and setInterval
 - [ ] Decorators and forwarding, call/apply
