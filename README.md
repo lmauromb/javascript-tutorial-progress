@@ -292,7 +292,21 @@ Track my progress through https://javascript.info/
     - Variable declarations are processed at function start.
   - There’s one more minor difference related to the global object, we’ll cover that in the next chapter.
   - These differences are actually a bad thing most of the time. First, we can’t create block-local variables. And hoisting just creates more space for errors. So, for new scripts `var` is used exceptionally rarely.
-- [ ] Global object
+- [x] Global object
+  - When JavaScript was created, there was an idea of a “global object” that provides all global variables and functions. It was planned that multiple in-browser scripts would use that single global object and share variables through it.
+  - Since then, JavaScript greatly evolved, and that idea of linking code through global variables became much less appealing. In modern JavaScript, the concept of modules took its place.
+  - But the global object still remains in the specification.
+  -In a browser it is named “window”, for Node.JS it is “global”, for other environments it may have another name.
+  - It does two things:
+    - Provides access to built-in functions and values, defined by the specification and the environment. For instance, we can call `alert` directly or as a method of `window`.
+      - `window.alert("Hello");`
+    - Provides access to global Function Declarations and var variables. We can read and write them using its properties.
+      - ...But the global object does not have variables declared with `let/const`!
+  - The global object is not a global Environment Record
+    - In versions of ECMAScript prior to ES-2015, there were no `let/const` variables, only `var`. And global object was used as a global Environment Record (wordings were a bit different, but that’s the gist).
+    - But starting from ES-2015, these entities are split apart. There’s a global Lexical Environment with its Environment Record. And there’s a global object that provides some of the global variables.
+    - As a practical difference, global `let/const` variables are definitively properties of the global Environment Record, but they do not exist in the global object.
+    - Naturally, that’s because the idea of a global object as a way to access “all global things” comes from ancient times. Nowadays is not considered to be a good thing. Modern language features like `let/const` do not make friends with it, but old ones are still compatible.
 - [ ] Function object, NFE
 - [ ] The "new Function" syntax
 - [ ] Scheduling: setTimeout and setInterval
