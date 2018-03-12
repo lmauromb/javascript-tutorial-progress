@@ -284,6 +284,8 @@ Track my progress through https://javascript.info/
   - Together they help to travel between a list and an array of parameters with ease.
   - All arguments of a function call are also available in "old-style" `arguments`, an array-like iterable object.
 - [x] Closure
+  - There is a general programming term `closure`, that developers generally should know.
+  - A `closure` is a function that remembers its outer variables and can access them. In some languages, that's not possible, or a function should be written in a special way to make it happen. But in JavaScript all functions are naturally closures (there's only one exclusion, the `new Function()` syntax). 
 - [ ] The old "var"
 - [ ] Global object
 - [ ] Function object, NFE
