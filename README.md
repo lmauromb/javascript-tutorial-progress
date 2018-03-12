@@ -286,7 +286,12 @@ Track my progress through https://javascript.info/
 - [x] Closure
   - There is a general programming term `closure`, that developers generally should know.
   - A `closure` is a function that remembers its outer variables and can access them. In some languages, that's not possible, or a function should be written in a special way to make it happen. But in JavaScript all functions are naturally closures (there's only one exclusion, the `new Function()` syntax). 
-- [ ] The old "var"
+- [x] The old "var"
+  - There are two main differences of `var`:
+    - Variables have no block scope, they are visible minimum at the function level.
+    - Variable declarations are processed at function start.
+  - There’s one more minor difference related to the global object, we’ll cover that in the next chapter.
+  - These differences are actually a bad thing most of the time. First, we can’t create block-local variables. And hoisting just creates more space for errors. So, for new scripts `var` is used exceptionally rarely.
 - [ ] Global object
 - [ ] Function object, NFE
 - [ ] The "new Function" syntax
