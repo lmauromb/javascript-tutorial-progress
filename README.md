@@ -317,7 +317,15 @@ Track my progress through https://javascript.info/
   - Also, functions may carry additional properties. Many well-known JavaScript libraries make great use of this feature.
   - They create a “main” function and attach many other “helper” functions to it. For instance, the [jquery](https://jquery.com/) library creates a function named `$`. The [lodash](https://lodash.com/) library creates a function `_`. And then adds `_.clone`, `_.keyBy` and other properties to (see the docs when you want learn more about them). Actually, they do it to lessen their pollution of the global space, so that a single library gives only one global variable. That reduces the possibility of naming conflicts.
   - So, a function can do a useful job by itself and also carry a bunch of other functionality in properties.
-- [ ] The "new Function" syntax
+- [x] The "new Function" syntax
+  - The syntax:
+    - `let func = new Function(arg1, arg2, ..., body);`
+  - For historical reasons, arguments can also be given as a comma-separated list.
+  - These three mean the same:
+    - `new Function('a', 'b', 'return a + b'); // basic syntax`
+    - `new Function('a,b', 'return a + b'); // comma-separated`
+    - `new Function('a , b', 'return a + b'); // comma-separated with spaces`
+  - Functions created with `new Function`, have `[[Environment]]` referencing the global Lexical Environment, not the outer one. Hence, they cannot use outer variables. But that’s actually good, because it saves us from errors. Passing parameters explicitly is a much better method architecturally and causes no problems with minifiers.
 - [ ] Scheduling: setTimeout and setInterval
 - [ ] Decorators and forwarding, call/apply
 - [ ] Function binding
