@@ -339,7 +339,7 @@ Track my progress through https://javascript.info/
         - The CPU is overloaded.
         - The browser tab is in background mode.
         - The laptop is on battery.
-      All that may increase the minimal timer resolution (the minimal delay) to 300ms or even 1000ms, depending on the browser and settings.
+      - All that may increase the minimal timer resolution (the minimal delay) to 300ms or even 1000ms, depending on the browser and settings.
 - [ ] Decorators and forwarding, call/apply
 - [ ] Function binding
 - [ ] Currying and partials
