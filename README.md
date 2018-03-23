@@ -326,7 +326,20 @@ Track my progress through https://javascript.info/
     - `new Function('a,b', 'return a + b'); // comma-separated`
     - `new Function('a , b', 'return a + b'); // comma-separated with spaces`
   - Functions created with `new Function`, have `[[Environment]]` referencing the global Lexical Environment, not the outer one. Hence, they cannot use outer variables. But that’s actually good, because it saves us from errors. Passing parameters explicitly is a much better method architecturally and causes no problems with minifiers.
-- [ ] Scheduling: setTimeout and setInterval
+- [x] Scheduling: setTimeout and setInterval
+  - methods `setInterval(func, delay, ..args)` and `setTimeout(func, delay, ..args)` allow to run the `func` regulary/once after `delay` in milliseconds.
+  - To cancel the execution, we should call `clearInterval/clearTimeout` with the value returned by `setInterval/setTimeout`.
+  - Nested `setTimeout` calls are a more flexible alternative than `setInterval`. Also they can guarantee the minimal time between the executions.
+  - Zero-timeout scheduling `setTimeout(...,0)` is used to schedule a call as soon as possible, but after the current code is complete`.
+    - Some use cases for zero-timeout scheduling:
+      - To split CPU-hungry tasks into pieces, so that the script doesn't "hang".
+      - To let the browser do something else while the process is going on.
+    - Note that, scheduling methods does not guarantee the exact delay. We should not rely on that in the scheduling code.
+      - For example, the in-browser timer may slow down for a lot of reasons:
+        - The CPU is overloaded.
+        - The browser tab is in background mode.
+        - The laptop is on battery.
+      All that may increase the minimal timer resolution (the minimal delay) to 300ms or even 1000ms, depending on the browser and settings.
 - [ ] Decorators and forwarding, call/apply
 - [ ] Function binding
 - [ ] Currying and partials
